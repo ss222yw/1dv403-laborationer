@@ -2,8 +2,8 @@
 
 window.onload = function(){
         
-        var secret = Math.floor( Math.random() * 100)+1; // Detta tal behöver bytas ut mot ett slumpat tal.
-        var counter = 0;
+        var secret = Math.floor( Math.random() * 100)+1; // Ett slumpat tal,Randomisera ett nummer.
+        var counter = 0;//Antal försök som börjar på noll och sedan ökar.
         // I denna funktion ska du skriva koden för att hantera "spelet"
         var guess = function(number){
                 console.log("Det hemliga talet: " + secret); // Du når den yttre variabeln secret innifrån funktionen.
@@ -11,9 +11,9 @@ window.onload = function(){
 
                 // Plats för förändring.
 
-          
-        if(number>=1 && number<=100){
-              counter += 1;
+          // Ifall nummer är större än 0 eller lika med 0 och nummer är mindre än 100 eller lika med 100 körs.
+        if(number>=0 && number<=100){
+              counter += 1; // Ökar med 1 varje gång användaren göra en ny försök.
               // [true, "Grattis du vann! Det hemliga talet var X och du behövde Y gissningar för att hitta det."]
                if(number == secret){
                alert("Grattis du vann! Det hemliga talet var: " + (secret)+ ". och du behövde " + (counter) +"gissningar för att hitta det.");
@@ -32,7 +32,8 @@ window.onload = function(){
             
                 alert("Talet är utanför intervallet 0 - 100");
         }
-    if(isNaN(number)){
+        //Om den är inte en nummer eller tom så kommer fel meddelande att visas.
+    if(isNaN(number)||number === ""){
         alert("Fel! Du måste mata in en siffra mellan 0-100");
     }
 

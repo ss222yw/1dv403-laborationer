@@ -9,12 +9,12 @@ var Aa = /a/ig; // Deklerar varibale och säger till att det gäller båda A och
 	// I denna funktion ska du skriva koden för att hantera "spelet"
 	var convertString = function(str){
     //Om input är tom kastas ett udantag med fel meddelande.
-    // Vid fel, kasta ett undantag med ett meddelande till användaren.
+    // Vid tomt, kasta ett undantag med ett meddelande till användaren.
     if(str===""){
         throw{message:"Fel! Du måste skriva nåting!"};
     }
 // Plats för förändring.
-// For loopen för att ---
+// For loopen för att skriva ut allt.
 for (i = 0; i < str.length; i++) {
     //Om input bokstaven är stor ändra till liten och alla A och a bokstäver ändras till #.
      if (str.charAt(i)===str.charAt(i).toUpperCase()) {
