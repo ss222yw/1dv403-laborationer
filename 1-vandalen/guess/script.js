@@ -10,7 +10,11 @@ window.onload = function(){
                 console.log("Du gissade: " + number); // Detta nummer är det som användaren gissade på.
 
                 // Plats för förändring.
-
+   //Om den är inte en nummer eller tom så kommer fel meddelande att visas.
+    if(isNaN(number)||number === ""){
+        alert("Fel! Du måste mata in en siffra mellan 0-100");
+    }
+    else
           // Ifall nummer är större än 0 eller lika med 0 och nummer är mindre än 100 eller lika med 100 körs.
         if(number>=0 && number<=100){
               counter += 1; // Ökar med 1 varje gång användaren göra en ny försök.
@@ -32,11 +36,7 @@ window.onload = function(){
             
                 alert("Talet är utanför intervallet 0 - 100");
         }
-        //Om den är inte en nummer eller tom så kommer fel meddelande att visas.
-    if(isNaN(number)||number === ""){
-        alert("Fel! Du måste mata in en siffra mellan 0-100");
-    }
-
+     
 
 
                 // Returnera exempelvis: 
