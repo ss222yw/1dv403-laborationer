@@ -10,7 +10,7 @@ var names = [];
 //Deklerar en variable.
 var sum;
 	// Din kod här...
-//Följande kod tar en array av siffror och skapar en ny array som innehåller kvadratrötter av siffrorna i den första uppsättningen
+//Följande kod tar en person ålder i en array.
 ages = persArr.map(function(person){
    return  person.age;
 });
@@ -28,7 +28,7 @@ result.minAge = ages.reduce(function(prevAge, age) {
 sum = ages.reduce(function(prevAge, age){
     return prevAge + age;
 });
-//Följande kod tar en array av siffror och skapar en ny array som innehåller kvadratrötter av siffrorna i den första uppsättningen
+//Följande kod tar en person namn i en array.
 names = persArr.map(function(person) {
     return person.name;
 });
