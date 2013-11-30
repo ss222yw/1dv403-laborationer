@@ -2,19 +2,19 @@
 	width: 860px;
 	height: 680px;
 	margin: auto;
-	background-color:white;	
-	
+
 }
+body{	background-image: url('pics/BODY2.png');background-repeat:no-repeat;background-color:black;}
 .clear
 {
-height:2px;
+height:60px;
 clear:both;
 }
 
 .board{
 	padding-left:150px;
 	margin: auto;
-	background-image: url('pics/mezzage.jpg');	
+	background-image: url('pics/meeage1.png');	
 	width:20%;
 	height:100%;
 }
@@ -22,7 +22,7 @@ clear:both;
 
 #messages {
 margin-left:-148px;
-padding:520px;
+padding:470px;
 padding-left:25px;
 	width: 377px;
 	font-family: Helvetica;
