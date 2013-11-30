@@ -1,0 +1,38 @@
+#wrapper {
+	width: 860px;
+	height: 680px;
+	margin: auto;
+	background-color:white;	
+	
+}
+.clear
+{
+height:2px;
+clear:both;
+}
+
+.board{
+	padding-left:150px;
+	margin: auto;
+	background-image: url('pics/mezzage.jpg');	
+	width:20%;
+	height:100%;
+}
+
+
+#messages {
+margin-left:-148px;
+padding:520px;
+padding-left:25px;
+	width: 377px;
+	font-family: Helvetica;
+}
+
+.button {
+display: block;
+font: normal 12px arial, sans-serif;
+height: 25px;
+text-decoration: none;
+width: 272px;
+text-align: center;
+}
