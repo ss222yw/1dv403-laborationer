@@ -33,7 +33,9 @@ padding-left:25px;
 	width: 377px;
 	font-family: Helvetica;
 }
-
+textarea:focus{
+	background-color:#FFF8DC;
+}
 .button {
 display: block;
 font: normal 12px arial, sans-serif;
