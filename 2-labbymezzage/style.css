@@ -11,6 +11,12 @@ height:60px;
 clear:both;
 }
 
+.clear1
+{
+height:10px;
+clear:both;
+}
+
 .board{
 	padding-left:150px;
 	margin: auto;
@@ -21,8 +27,8 @@ clear:both;
 
 
 #messages {
-margin-left:-148px;
-padding:470px;
+margin-left:-151px;
+padding:440px;
 padding-left:25px;
 	width: 377px;
 	font-family: Helvetica;

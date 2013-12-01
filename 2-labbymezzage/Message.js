@@ -1,3 +1,5 @@
+"use strict";
+
 function Message (message, date){
     this.getText = function(){
         return message;
@@ -24,3 +26,13 @@ Message.prototype.getHTMLText = function() {
 	return this.getText().replace(/[\n]/g, "<br />");
 };
 
+//Funktionen som returnerar tiden
+Message.prototype.getDateText = function() {
+	var time = this.getDate();
+	var hours = time.getHours();
+	var minutes = time.getMinutes();
+	var seconds = time.getSeconds();
+	var getDateText = hours+":"+minutes+":"+seconds;
+	return getDateText;
+
+};

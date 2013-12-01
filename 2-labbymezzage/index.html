@@ -5,16 +5,25 @@
  	<title>Labby Mezzage</title>
   <link type="text/css" href="style.css" rel="stylesheet"></link>
 </head>
+<header></header>
     <body>
+    <div id="top"></div>
     <div id="wrapper">
-     <div id="top"></div>
-                <div id="left"></div>
-        <div id="board" class="board">
+    <div id="header"></div>
+        <div id="content" class="board">
+        
             <div class="main">
+            
+            <div id="messageHTML"></div>
+            
                 <div id="messages">
-<textarea placeholder="skriv ditt medelande här, shift+enter för radbrytning, enter för att skriva ut meddelande eller knappen SKRIV!"  cols="31" rows="5"></textarea>
+                
+                <div id="count">Antal meddelanden: 0</div>
+                <div class="clear1"></div>
+                <form action="post" name="form">
+                <textarea id="messagearea" name="messagearea" placeholder="skriv ditt medelande här, shift+enter för radbrytning, enter för att skriva ut meddelande eller knappen SKRIV!"  cols="31" rows="5"></textarea>
                 <div class="clear"></div>
-                <input type="button" value="SKRIV!" class="button">
+                <input type="button" value="SKRIV!" class="button"></input></form>
                 </div>
             </div>
         </div>
