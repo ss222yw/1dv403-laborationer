@@ -4,16 +4,17 @@
 	margin: auto;
 
 }
-body{	background-image: url('pics/BODY2.png');background-repeat:no-repeat;background-color:black;}
+body{	background-image: url('pics/BODY2.png');background-repeat:no-repeat;background-color:black;
+}
 .clear
 {
-height:60px;
+height:10px;
 clear:both;
 }
-
+p{color:white; font-size:1.5em; }
 .clear1
 {
-height:10px;
+height:15px;
 clear:both;
 }
 
@@ -24,6 +25,7 @@ clear:both;
 	width:20%;
 	height:100%;
 }
+
 
 
 #messages {
@@ -37,10 +39,19 @@ textarea:focus{
 	background-color:#FFF8DC;
 }
 .button {
+color:#CC99FF;
+background:#000033;
+border-radius: 15px 15px 15px 15px; 
 display: block;
 font: normal 12px arial, sans-serif;
 height: 25px;
 text-decoration: none;
-width: 272px;
+width: 75px;
 text-align: center;
+margin-left:102px;
+}
+footer{font-family: 'Loved by the King', cursive;}
+
+#top{
+	background:black;
 }
