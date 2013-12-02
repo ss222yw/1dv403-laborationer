@@ -2,34 +2,28 @@
 <html lang="sv">
 <head>
 	<meta charset="UTF-8" />
- 	<title>Labby Mezzage</title>
-  <link type="text/css" href="style.css" rel="stylesheet" />
-<link href='https://fonts.googleapis.com/css?family=Loved+by+the+King' rel='stylesheet' type='text/css'>    
+	 	<title>Labby Mezzage</title>
+        <link type="text/css" href="style.css" rel="stylesheet" />
+        <link href='https://fonts.googleapis.com/css?family=Loved+by+the+King' rel='stylesheet' type='text/css'>    
 </head>
-    <body>
-    <div id="top"></div>
-    <div id="wrapper">
-    <div id="header"></div>
-        <div id="content" class="board">
-        
-            <div class="main">
-                <div id="messages">
-                
-                <div id="count">Antal meddelanden: 0</div>
-                <div class="clear1"></div>
-                <form action="post" name="form">
-                <textarea id="messagearea" name="messagearea" placeholder="skriv ditt medelande här, shift+enter för radbrytning, enter för att skriva ut meddelande eller knappen SKRIV!"  cols="31" rows="5"></textarea>
-                <div class="clear"></div>
-                <input id="sendmessage" type="button" value="SKRIV!" class="button" /></form>
-                </div>
-            </div>
-        </div>
-    </div>
- 	   
-  <script src="MessageBoard.js" type="text/javascript"></script>
-  <script src="Message.js" type="text/javascript"></script>
-   </body>
-   <footer>
-  <p>Labby Mezzage Created: by Sahib Sahib (ss222yw)</p>
-   </footer>
+<body>
+
+     <div id="top"></div>
+     <div id="wrapper">
+     <div id="header"></div>
+     <div id="content">
+     <div id="messcontainer"></div>
+            <div id="count">Antal meddelanden: 0</div>
+            <form action="post" name="form">
+            <textarea id="messagearea" name="messagearea" placeholder="skriv ditt medelande här, shift+enter för radbrytning, enter för att skriva ut meddelande eller knappen SKRIV!"  cols="31" rows="5"></textarea>
+            <input id="sendmessage" type="button" value="SKRIV!" class="button" />
+            </form>
+     </div>
+   </div>
+     <footer>
+     <p>Labby Mezzage Created by: Sahib Sahib (ss222yw)</p>
+     </footer>
+     <script src="MessageBoard.js" type="text/javascript"></script>
+     <script src="Message.js" type="text/javascript"></script>
+</body>
 </html>

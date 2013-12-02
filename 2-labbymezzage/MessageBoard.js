@@ -4,24 +4,24 @@ var MessageBoard = {
 	messages: [],
 	//Applikationens motor.
 	init: function(){
-     //Retunera en refrens.
-      var text = document.getElementById("messagearea");
       // Startar räknaren från 0
       MessageBoard.count();
+     //Retunera en refrens.
+      var text = document.getElementById("messagearea");
      // Sätter fokus på textelementet
      text.focus();
      //Ser till att det går att skicka meddelande med enter-tagenten och att skapa ny rad med shift+enter.
      text.onkeypress = function(e){
 		if(!e){ e = window.event; }
 			if(e.shiftKey === false && e.keyCode == 13){
-				MessageBoard.addMessage();
+				MessageBoard.creatMessage();
 				return false;
 			}
 		};
 		var send = document.getElementById("sendmessage");
-		send.onclick = MessageBoard.addMessage;	
+		send.onclick = MessageBoard.creatMessage;	
 	},
-   addMessage: function(){	
+   creatMessage: function(){	
 		// Skapar nytt meddelandeobjekt
 		var newMessage = new Message(document.form.messagearea.value, new Date());	
 		MessageBoard.messages.push(newMessage);
@@ -50,7 +50,7 @@ var MessageBoard = {
 		var imgTimer = document.createElement("img");
 		imgTimer.src = "pics/timer.png";
 		imgTimer.alt="Timestamp";
-		imgTimer.title="Se tiden meddelandet postades.";
+		imgTimer.title="Se när meddelandet postades exakt!.";
 		aTimer.appendChild(imgDelete);
 		aDelete.appendChild(imgTimer);
 		var buttons = document.createElement("div");
@@ -58,19 +58,57 @@ var MessageBoard = {
 		buttons.appendChild(aTimer);
 		buttons.appendChild(aDelete);
 		buttons.appendChild(time);
+		// Skapar div tagg som innehåller meddelandet och lägger till datum och länk på denna
+		var msg = document.createElement("div");
+		msg.className = "msg";
+		msg.innerHTML = MessageBoard.messages[messageID].getHTMLText();
+		msg.appendChild(buttons);
+		// Hämtar div tagg i HTML. där meddelandena ska läggas
+		var mess = document.getElementById("messcontainer");
+		mess.appendChild(msg);
+		
+		imgDelete.onclick = function(){
+			MessageBoard.delMessage(messageID);
+		}; 
+		
+		imgTimer.onclick = function(){
+			MessageBoard.timeMessage(messageID);
+		};
 		
         },
-
         
-        deleteMessage: function(messageID) {
-		//En frågeruta frågar användaren om han verkligen vill radera meddelandet
-		if (window.confirm("Är du säker på att du vill radera meddelandet?")) {
-         //Plockar bort meddelandet med tillhörande data
-  MessageBoard.myMessages.splice(messageID, 1);
- //För att det ska synas att man har plockat bort meddelandet får man rendera dem på nytt
- MessageBoard.renderMessages();
-		} 
+        renderMessages: function(){
+		document.getElementById("messcontainer").innerHTML = "";
+		for(var i = 0; i < MessageBoard.messages.length; ++i){
+			MessageBoard.renderMessage(i);	
+		}
+		//rensar formulär från tidigare skrift 
+		document.form.messagearea.value = "";
 	},
+         // Funktionen raderar meddelanden
+       delMessage: function(messageID){
+       // Ruta som frågar om man verkligen vill radera meddelandet
+		var del = confirm("Vill du verkligen ta bort meddelandet?");
+		if(del){
+           // Tar bort ett meddelande med unikt ID
+			MessageBoard.messages.splice(messageID, 1);
+            //Det ska synas att man har tagit bort meddelandet för man skriva ut dem på nytt
+			MessageBoard.renderMessages();
+			//Räknare som räknar antal meddlande efter att användren har tagit bort en/några.
+			MessageBoard.count();
+		}	
+	},
+	
+		timeMessage: function(messageID){
+		alert(MessageBoard.messages[messageID].getTimeStamp());
+		
+	},
+	// Meddelanderäknare-funktion
+	count: function(){
+		var countN = document.getElementById("count");
+		countN.innerHTML = "Antal meddelanden: " + MessageBoard.messages.length;
+	}
+
         
 };
 

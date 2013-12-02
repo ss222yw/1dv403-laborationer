@@ -4,41 +4,45 @@
 	margin: auto;
 
 }
-body{	background-image: url('pics/BODY2.png');background-repeat:no-repeat;background-color:black;
+body{	background-image: url("pics/js.jpg");
+	font-family: 'Loved by the King', cursive;;
+	font-size: 12px;
+	font-size:1.2em;}
+#header{
+    
+background-image: url("pics/cool.png");
+background-repeat: no-repeat;
+height: 75px;
+width: 518px;
+margin-left: 160px;
 }
-.clear
-{
-height:10px;
-clear:both;
-}
-p{color:white; font-size:1.5em; }
-.clear1
-{
-height:15px;
-clear:both;
+ img{
+    width:25px;
+    height:25px;
+    float:right;
+    padding: 2px;
+    
 }
 
-.board{
+#top{
+	background-color: lightslategrey;
+}
+
+
+#count{
+clear: both;
+margin-left: -122px;
+margin-bottom: 8px;
+color:white;
+}
+#content{
 	padding-left:150px;
 	margin: auto;
-	background-image: url('pics/meeage1.png');	
+	background-image: url('pics/Mezzage3.png');	
 	width:20%;
 	height:100%;
 }
-
-
-
-#messages {
-margin-left:-151px;
-padding:440px;
-padding-left:25px;
-	width: 377px;
-	font-family: Helvetica;
-}
-textarea:focus{
-	background-color:#FFF8DC;
-}
-.button {
+input {
 color:#CC99FF;
 background:#000033;
 border-radius: 15px 15px 15px 15px; 
@@ -48,10 +52,65 @@ height: 25px;
 text-decoration: none;
 width: 75px;
 text-align: center;
-margin-left:102px;
-}
-footer{font-family: 'Loved by the King', cursive;}
+margin-left:-25px;
 
-#top{
-	background:black;
 }
+
+
+#messcontainer {
+font-family: 'Loved by the King', cursive;
+font-size: 1.1em;
+margin-top: 88px;
+height: 355px;
+width: 269px;
+overflow: auto;
+float: right;
+margin-right: 27px;
+
+}
+textarea:focus{
+	background-color:#FFF8DC;
+}
+#messagearea{
+margin-left: -124px;
+width: 263px;
+height: 90px;
+margin-top: -17px;
+
+}
+footer{font-family: 'Loved by the King', cursive;;
+	font-size:1.5em;
+	color:white;}
+
+
+.msg{
+border-bottom: 1px solid black;
+height: auto;
+overflow: hidden;
+background-color:#FFF8DC;
+border-radius: 5px 5px 5px 5px;
+margin: 5px;
+} 
+
+.tim{
+		text-align: right;
+	font-size: 10px;
+	color: #999;
+	padding: 0px 2px 0px 2px;
+	line-height: 100%;
+}
+
+
+input:hover
+{
+-webkit-transform: scale(1.2);
+-moz-transform: scale(1.2);
+-o-transform: scale(1.2);
+transform: scale(1.2);
+}
+
+img:hover{-webkit-transform: scale(1.4);
+-moz-transform: scale(1.4);
+-o-transform: scale(1.4);
+transform: scale(1.4);}
+
