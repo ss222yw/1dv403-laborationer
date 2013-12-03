@@ -17,11 +17,19 @@ var MessageBoard = {
 				MessageBoard.creatMessage();
 				return false;
 			}
+
 		};
 		var send = document.getElementById("sendmessage");
 		send.onclick = MessageBoard.creatMessage;	
 	},
+	
    creatMessage: function(){	
+          // ifall man trycker på knappen eller enter händer ingeting.
+         var embty = document.getElementById("messagearea").value;
+                if ("" === embty) {
+                return false;
+                
+                }
 		// Skapar nytt meddelandeobjekt
 		var newMessage = new Message(document.form.messagearea.value, new Date());	
 		MessageBoard.messages.push(newMessage);

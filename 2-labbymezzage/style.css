@@ -4,7 +4,7 @@
 	margin: auto;
 
 }
-body{	background-image: url("pics/js.jpg");
+body{	background-image: url("pics/sahib.jpg");
 	font-family: 'Loved by the King', cursive;;
 	font-size: 12px;
 	font-size:1.2em;}
@@ -69,7 +69,7 @@ margin-right: 27px;
 
 }
 textarea:focus{
-	background-color:#FFF8DC;
+	background-color:#7FFFD4;
 }
 #messagearea{
 margin-left: -124px;
@@ -86,19 +86,13 @@ footer{font-family: 'Loved by the King', cursive;;
 .msg{
 border-bottom: 1px solid black;
 height: auto;
-overflow: hidden;
+overflow:hidden;
 background-color:#FFF8DC;
 border-radius: 5px 5px 5px 5px;
 margin: 5px;
+word-wrap:break-word;
 } 
 
-.tim{
-		text-align: right;
-	font-size: 10px;
-	color: #999;
-	padding: 0px 2px 0px 2px;
-	line-height: 100%;
-}
 
 
 input:hover
@@ -113,4 +107,5 @@ img:hover{-webkit-transform: scale(1.4);
 -moz-transform: scale(1.4);
 -o-transform: scale(1.4);
 transform: scale(1.4);}
+
 
