@@ -53,7 +53,33 @@ var Memory = {
             }
         }
         
-    }
+    },
+    
+    //Skapar metoden som onclickeventet anropar och vändar brickan.
+   turnCount: function(c,länk){
+       länk.onclick = function(){
+           // Bilden får inte vara annat än startbild.
+           if (this.getElementByTagName("img")[0].setAttribute("src")!=="pics/0.png") {
+               return false;
+           }
+           
+          //Lägger till ett nytt element i arrayen.
+           Memory.array.push(länk);
+           
+             // Ifall längden på arrayen är 1 eller 2 så visar bilden
+            if (Memory.array.length === 1 || Memory.array.length === 2) {
+                this.getElementsByTagName("img")[0].setAttribute("src", "pics/" + Memory.randomarray[c] + ".png");
+            }
+            
+            // Om bilderna stämmer inte överens, anropas checkCount funktionen efter en sekund.
+            if(Memory.array.length===2){
+                setTimeout(function() {
+                    Memory.checkCount(Memory.array);
+                }, 500);
+            }
+       };
+   },
+   
    
 };
 
