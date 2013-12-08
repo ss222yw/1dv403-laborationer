@@ -29,15 +29,15 @@ var Memory = {
         // Varivale som räknar.
         var count = 0;
         // lägger ul i divtaggen content.
-        document.getElementById("content") .appendChild("ul");
+        document.getElementById("content").appendChild(ul);
         
-        for (var row = 0; row < rows; ++rows ){
+        for (var row = 0; row < rows; ++row ){
             tr = document.createElement("tr");
-            ul.appendChild("tr");
+            ul.appendChild(tr);
             
-            for(var col = 0; col < cols; ++cols){
+            for(var col = 0; col < cols; ++col){
                  td = document.createElement("td");
-                tr.appendChild("td");
+                tr.appendChild(td);
                 //Skappar bilderna.
                 pics = document.createElement("img");
                 pics.setAttribute("src", "pics/0.png");
@@ -45,8 +45,8 @@ var Memory = {
                 li = document.createElement("li");
                 a = document.createElement("a");
                 a.href = "#";
-                li.appendChild("pics");
-                td.appendChild("li");
+                li.appendChild(pics);
+                td.appendChild(li);
                 // Räknar upp.
                 count++;
                 
