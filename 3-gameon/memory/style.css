@@ -3,3 +3,6 @@ li {
     list-style-type: none;
     
 }
+#content{float:right; padding:330px;}
+#content ul {margin:auto;}
+img{width:120%; height:120%;}
