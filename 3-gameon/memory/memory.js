@@ -101,7 +101,7 @@ var Memory = {
            //Kontrollerar räknaren kolla om spelaren har vunnit
            // Om countPair är hälften så mycket är bildrna, så anändaren har vunnit.
            if (Memory.countPair === ((cols*rows)/2)){
-               alert("Grattis! Du vann!\nAntal försök är: " + Memory.countTrying);
+               alert("Grattis! Du vann!\nAntal försök är : " + Memory.countTrying);
            }
            // Memory.array är töm.
            Memory.array = [];

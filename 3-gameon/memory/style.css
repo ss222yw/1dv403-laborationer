@@ -1,8 +1,30 @@
-body{background-color:yellow;}
+body{background-image: url("snö1.jpg"); background-repeat:no-repeat;}
 li {
     list-style-type: none;
     
 }
-#content{float:right; padding:330px;}
-#content ul {margin:auto;}
-img{width:120%; height:120%;}
+#content{padding-left: 425px;
+padding-top: 33px;}
+img{
+    background-color:white;
+    border-radius:100px;
+    box-shadow: 10px 10px 10px black;
+    padding: 10px 10px 10px 10px; width:50px;}
+
+#bart{ padding-left: 465px;
+padding-top: 25px;}
+
+ul {
+float: left;
+padding: 22px;
+margin: 20px;
+}
+td {
+padding-left: 10px;
+}
+h1{text-shadow: 5px 5px 5px white; font-family: 'Electrolize', sans-serif; font-size:3em }
+
+img:hover{-webkit-transform: scale(1.1);
+-moz-transform: scale(1.1);
+-o-transform: scale(1.1);
+transform: scale(1.1);}
