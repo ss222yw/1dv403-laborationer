@@ -9,18 +9,18 @@ img{
     background-color:white;
     border-radius:100px;
     box-shadow: 10px 10px 10px black;
-    padding: 10px 10px 10px 10px; width:50px;}
+    padding: 6px 6px 6px 6px; width:40px;}
 
-#bart{ padding-left: 465px;
+#bart{ padding-left: 610px;
 padding-top: 25px;}
 
 ul {
-float: left;
-padding: 22px;
-margin: 20px;
+margin-top: 10px;
+margin-left: 166px;
 }
 td {
-padding-left: 10px;
+padding-left: 15px;
+padding-top: 15px;
 }
 h1{text-shadow: 5px 5px 5px white; font-family: 'Electrolize', sans-serif; font-size:3em }
 

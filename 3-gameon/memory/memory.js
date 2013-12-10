@@ -88,7 +88,7 @@ var Memory = {
             if(Memory.array.length===2){
                 setTimeout(function() {
                     Memory.checkCount(Memory.array);
-                }, 500);
+                }, 400);
             }
        };
    },
