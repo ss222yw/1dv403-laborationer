@@ -4,17 +4,19 @@ body {background:url(testy.jpg);}
 
 body p{color:gainsboro;}
 
-#firstName {padding-left: 20px; border: solid 1px; padding:7px;}
+#button:hover {-webkit-transform: scale(1.1); -moz-transform: scale(1.1); -o-transform: scale(1.1); transform: scale(1.1);}
 
-#lastName {padding-left: 20px; border: solid 1px; padding:7px;}
+#firstName {background-color: gainsboro; padding-left: 20px; border: solid 1px; padding:7px;}
 
-#postcode {border: solid 1px black; padding-left: 19px; padding:7px;}
+#lastName {background-color: gainsboro; padding-left: 20px; border: solid 1px; padding:7px;}
 
-#email {padding-left: 22px;  border: solid 1px; padding:7px;}
+#postcode {background-color: gainsboro; border: solid 1px black; padding-left: 19px; padding:7px;}
 
-#price {margin-bottom: 10px; width:175px; border: solid 1px; padding:7px;}
+#email {background-color: gainsboro; padding-left: 22px;  border: solid 1px; padding:7px;}
 
-#button {width: 177px;}
+#price {margin-left: 10px; margin-bottom: 10px; width:175px; border: solid 1px; padding:7px; background-color: gainsboro;}
+
+#button {width: 177px; margin-left: 10px;}
 
 h1{font-family: 'Akronim', cursive; color:gainsboro;}
 
@@ -23,3 +25,7 @@ label {font-family: cursive; font-style: italic; font-weight: 600;}
 footer p {font-family: 'Nixie One', cursive; color:gainsboro;}
 
 #wrapper {width: 960px; margin: auto; height: auto; color:gainsboro;}
+
+strong{color:gainsboro;}
+
+select {color: darkslategray;}

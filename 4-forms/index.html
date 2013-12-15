@@ -13,16 +13,16 @@
     <h1>Fylle i din betalningsplan.</h1>
     <form action="http://voyager.lnu.se/tekinet/kurser/dtt/wp_webbteknik/process_form.php" method="POST" id="theForm">
     <label for="firstName">Förnamn :</label><br />
-    <input type="text" placeholder="Skriv ditt förnamn här!" name="firstName" id="firstName" />
+    <strong>*</strong><input type="text" placeholder="Skriv ditt förnamn här!" name="firstName" id="firstName" />
     <div class="clear"></div>
     <label for="lastName">Efternamn :</label><br />
-    <input type="text" placeholder="Skriv ditt efternamn här!" name="lastName" id="lastName" />
+    <strong>*</strong><input type="text" placeholder="Skriv ditt efternamn här!" name="lastName" id="lastName" />
     <div class="clear"></div>
     <label for="postcode">Postnummer :</label><br />
-    <input type="number" placeholder="Skriv din PN,tex.31223" name"postcode" id="postcode"/>
+    <strong>*</strong><input type="number" placeholder="Skriv din PN,tex.31223" name="postcode" id="postcode"/>
     <div class="clear"></div>
     <label for="email">E-Post :</label><br />
-    <input type="email" placeholder="Skriv din e-post här!" name"email" id="email"/>
+    <strong>*</strong><input type="email" placeholder="Skriv din e-post här!" name="email" id="email"/>
     <div class="clear"></div>
     <label for="price">Prismodell</label><br />
     <select name="price" id="price">
@@ -39,6 +39,6 @@
     </footer>
     </main>
     <script src="validator.js"></script>
+    </div>
 </body>
-</div>
 </html>
