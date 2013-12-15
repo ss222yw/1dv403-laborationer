@@ -5,6 +5,7 @@ li {
 }
 #content{padding-left: 425px;
 padding-top: 33px;}
+footer p{text-shadow: 5px 5px 5px white; font-family: 'Electrolize', sans-serif; font-size:2em; padding-left:400px;}
 img{
     background-color:white;
     border-radius:100px;

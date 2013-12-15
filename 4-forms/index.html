@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Validering av formulär</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href='https://fonts.googleapis.com/css?family=Akronim' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Nixie+One' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<div id="wrapper">
+<main>
+    <h1>Fylle i din betalningsplan.</h1>
+    <form action="http://voyager.lnu.se/tekinet/kurser/dtt/wp_webbteknik/process_form.php" method="POST" id="form">
+    <label for="firstName">Förnamn :</label><br />
+    <input type="text" placeholder="Skriv ditt förnamn här!" name="firstName" id="firstName" />
+    <div class="clear"></div>
+    <label for="lastName">Efternamn :</label><br />
+    <input type="text" placeholder="Skriv ditt efternamn här!" name="lastName" id="lastName" />
+    <div class="clear"></div>
+    <label for="postcode">Postnummer :</label><br />
+    <input type="number" placeholder="Ange i XXXXX,tex.31223" name"postcode" id="postcode"/>
+    <div class="clear"></div>
+    <label for="email">E-Post :</label><br />
+    <input type="email" placeholder="Skriv din e-post här!" name"email" id="email"/>
+    <div class="clear"></div>
+    <label for="price">Prismodell</label><br />
+    <select name="price" id="price">
+        <option>Välj</option>
+        <option>Låg</option>
+        <option>Hög</option>
+    </select>
+    <div class="clear"></div>
+    <button class="submit">Genomför köp</button>
+    </form>
+    <div class="clear"></div>
+    <footer>
+       <p>Denna sidan är skapat av Sahib Sahib</p>
+    </footer>
+    </main>
+</body>
+</div>
+</html>

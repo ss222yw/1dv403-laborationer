@@ -88,7 +88,7 @@ var Memory = {
             if(Memory.array.length===2){
                 setTimeout(function() {
                     Memory.checkCount(Memory.array);
-                }, 400);
+                }, 888);
             }
        };
    },
@@ -114,6 +114,7 @@ var Memory = {
             Memory.array = [];
             // räknar upp ett försök
             Memory.countTrying++;
+            
        }
 
        
