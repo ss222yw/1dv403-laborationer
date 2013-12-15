@@ -11,7 +11,7 @@
 <div id="wrapper">
 <main>
     <h1>Fylle i din betalningsplan.</h1>
-    <form action="http://voyager.lnu.se/tekinet/kurser/dtt/wp_webbteknik/process_form.php" method="POST" id="form">
+    <form action="http://voyager.lnu.se/tekinet/kurser/dtt/wp_webbteknik/process_form.php" method="POST" id="theForm">
     <label for="firstName">Förnamn :</label><br />
     <input type="text" placeholder="Skriv ditt förnamn här!" name="firstName" id="firstName" />
     <div class="clear"></div>
@@ -19,7 +19,7 @@
     <input type="text" placeholder="Skriv ditt efternamn här!" name="lastName" id="lastName" />
     <div class="clear"></div>
     <label for="postcode">Postnummer :</label><br />
-    <input type="number" placeholder="Ange i XXXXX,tex.31223" name"postcode" id="postcode"/>
+    <input type="number" placeholder="Skriv din PN,tex.31223" name"postcode" id="postcode"/>
     <div class="clear"></div>
     <label for="email">E-Post :</label><br />
     <input type="email" placeholder="Skriv din e-post här!" name"email" id="email"/>
@@ -31,13 +31,14 @@
         <option>Hög</option>
     </select>
     <div class="clear"></div>
-    <button class="submit">Genomför köp</button>
+    <input id="button" type="submit" value="Genomför köp">
     </form>
     <div class="clear"></div>
     <footer>
        <p>Denna sidan är skapat av Sahib Sahib</p>
     </footer>
     </main>
+    <script src="validator.js"></script>
 </body>
 </div>
 </html>

@@ -1,13 +1,25 @@
 .clear {clear:both; height:20px;}
+
 body {background:url(testy.jpg);}
+
 body p{color:gainsboro;}
+
 #firstName {padding-left: 20px; border: solid 1px; padding:7px;}
+
 #lastName {padding-left: 20px; border: solid 1px; padding:7px;}
+
 #postcode {border: solid 1px black; padding-left: 19px; padding:7px;}
+
 #email {padding-left: 22px;  border: solid 1px; padding:7px;}
+
 #price {margin-bottom: 10px; width:175px; border: solid 1px; padding:7px;}
-.submit {width: 177px;}
+
+#button {width: 177px;}
+
 h1{font-family: 'Akronim', cursive; color:gainsboro;}
+
 label {font-family: cursive; font-style: italic; font-weight: 600;}
+
 footer p {font-family: 'Nixie One', cursive; color:gainsboro;}
+
 #wrapper {width: 960px; margin: auto; height: auto; color:gainsboro;}
