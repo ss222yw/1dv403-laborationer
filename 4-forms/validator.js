@@ -12,7 +12,7 @@ var Validator = {
         var form = null;
         var Button = null;
         
-         // Hämtar förmälaret.
+         // Hämtar förmälaret via element id.
         form = document.getElementById("theForm");
         Button = document.getElementById("button");
         fname = document.getElementById("firstName");
@@ -85,15 +85,23 @@ var Validator = {
         
         // Validerar post nummer med onblur dvs nät användern utanför rutan till kärem.
         post.onblur = function ()  {
-
-            if(!post.value.match(/^\d{5}$/ )) {
+            if (!post.value.match(/^(SE)?[\ ]?[\d]{3}(-|\ )?[\d]{2}$/)) {
                 produceMessage("Fel! Ange en giligt postnummer dvs i formet 12345!", "postprompt", "red");
-                return false;
+                  return false;
+                
             }
-            else{
-            produceMessage("√", "postprompt", "green");
-            return true;
+            
+            else  {
+                  
+               post.value = post.value.replace(/(SE|\ |-)/g,"");
+                produceMessage("√", "postprompt", "green");
+
             }
+            
+    
+
+           
+            
         };
         
         // Validerar epost med onblur dvs nät användern utanför rutan till kärem.
