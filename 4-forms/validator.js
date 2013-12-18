@@ -95,7 +95,7 @@ var Validator = {
                   
                post.value = post.value.replace(/(SE|\ |-)/g,"");
                 produceMessage("√", "postprompt", "green");
-
+                  return true;
             }
             
     
