@@ -11,6 +11,7 @@ var Validator = {
         var mail = null;
         var form = null;
         var Button = null;
+        var price = null;
         
          // Hämtar förmälaret via element id.
         form = document.getElementById("theForm");
@@ -19,6 +20,7 @@ var Validator = {
         lname = document.getElementById("lastName");
         post = document.getElementById("postcode");
         mail = document.getElementById("email");
+        price = document.getElementById("price");
         
          // Skapar meddelandet vid anrop av fel eller rätt flying av rutor.
         function produceMessage(message, prompt, color) {
@@ -117,19 +119,95 @@ var Validator = {
             }
         };
         
-      
+         // Funktionen onclick.
+         Button.onclick = function () {
+             
+        if ((!fname.onblur())||(!lname.onblur())||(!post.onblur())||(!post.onblur())) 
+        {
+         return false;
+        }
         
-        // Anrop vid onclick för validering av alla onblur innan användaren får genomföra köpet.
-            Button.onclick = function () {
-            if (!fname.onblur() || !lname.onblur() || !post.onblur() || !mail.onblur()) {
-                return false;
-            }
-            else{
-            return true;
-            }
+       // Skapar div tagg.
+       var background = document.createElement("div");
+       background.className = "background";
+      document.body.appendChild(background);
+      var div = document.createElement("div");
+      div.className = "popupWindow";
+     document.body.appendChild(div);
+     var h2 = document.createElement("h2");
+     var title = document.createTextNode("Var vänlig och bekräfta ditt köp!");
+     div.appendChild(h2);
+     h2.appendChild(title);
+     
+     // Skapar p tagg för att visar meddlande där står det allt info anävndaren har fyllt i.
+       var p = document.createElement("p");
+       var fName = document.createTextNode ("Förnamn : " + fname.value);
+       p.appendChild(fName);
+       div.appendChild(p);  
+       p = document.createElement("p");
+       var lName = document.createTextNode ("Efternamn : " + lname.value);
+       p.appendChild(lName);
+       div.appendChild(p);  
+       p = document.createElement("p");
+       var postnumber = document.createTextNode ("Postnummer : " + post.value);
+       p.appendChild(postnumber);
+       div.appendChild(p);  
+       p   = document.createElement("p");
+       var epost = document.createTextNode ("Epost : " + mail.value);
+       p.appendChild(epost);
+       div.appendChild(p);
+       p = document.createElement("p");
+       var price1 = document.createTextNode ( "Pris : " + price.value);
+       p.appendChild(price1);
+       div.appendChild(p);
+       
+       // Skapar cancel button. 
+       var closeButton = document.createElement("input");
+       closeButton.type = "button";
+       closeButton.value = "Avbryt!";
+       div.appendChild(closeButton);
+   
+       closeButton.onclick = function() {
+       fname.disabled = false;
+       lname.disabled = false;
+       post.disabled = false;
+       mail.disabled = false;
+       price.disabled = false;
+       Button.disabled = false;
+       document.body.removeChild(div);
+       document.body.removeChild(background);
+     }; 
+      
+      // Skapar submit button.
+      var sendButton = document.createElement("input");
+      sendButton.type = "submit";
+      sendButton.value = "Bekräfta ditt köp!";
+      div.appendChild(sendButton);
+
+      sendButton.onclick = function() {
+      fname.disabled = false;
+      lname.disabled = false;
+      post.disabled = false;
+      mail.disabled = false;
+      price.disabled = false;
+      Button.disabled = false;
+      form.submit();
+     }; 
+
+     fname.disabled = true;
+     lname.disabled = true;
+     post.disabled = true;
+     price.disabled = true;
+     mail.disabled = true;
+     Button.disabled = true;
+
+  return false;
+
+  };
+
+
             
-        };     
         
     }
 };
-window.onload = Validator.init;
+window.onload = Validator.init;   

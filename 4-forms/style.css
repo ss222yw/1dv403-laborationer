@@ -1,8 +1,8 @@
 .clear {clear:both; height:20px;}
 
-body {background:url(testy.jpg);}
+body {background:url(whitehd.jpg);}
 
-body p{color:gainsboro;}
+body p{color: rgb(18, 17, 58); }
 
 #button:hover {-webkit-transform: scale(1.1); -moz-transform: scale(1.1); -o-transform: scale(1.1); transform: scale(1.1);}
 
@@ -14,18 +14,33 @@ body p{color:gainsboro;}
 
 #email {background-color: gainsboro; padding-left: 22px;  border: solid 1px; padding:7px;}
 
-#price {margin-left: 10px; margin-bottom: 10px; width:175px; border: solid 1px; padding:7px; background-color: gainsboro;}
+#price {margin-left: 268px; margin-bottom: 10px; width: 153px; border: solid 1px; padding: 7px; background-color: gainsboro;}
 
-#button {width: 177px; margin-left: 10px;}
+#button {width: 153px; margin-left: 268px;}
+h1{font-family: 'Akronim', cursive; color:black; padding-left: 275px;}
 
-h1{font-family: 'Akronim', cursive; color:gainsboro;}
+label {font-family: cursive; font-style: italic; font-weight: 600; margin-left: 270px;}
 
-label {font-family: cursive; font-style: italic; font-weight: 600;}
+footer p {font-family: 'Nixie One', cursive; color: blanchedalmond; font-size: 2em; margin-top: 240px;}
 
-footer p {font-family: 'Nixie One', cursive; color:gainsboro;}
+#wrapper {width: 960px; margin: auto; height: auto; color:black;}
 
-#wrapper {width: 960px; margin: auto; height: auto; color:gainsboro;}
+#lnameprompt {font-size: 1.5em;}
 
-strong{color:antiquewhite;}
+#fnameprompt {font-size: 1.5em;}
+
+#postprompt {font-size: 1.5em;}
+
+#mailprompt {font-size: 1.5em;}
+
+strong{color:antiquewhite; margin-left: 260px;}
 
 select {color: darkslategray;}
+
+.popupWindow {display: block;  position: absolute; left: 40%; top: 30%; background-color: gray; box-shadow: black 5px 1px 30px 5px; padding-left: 5px; padding-right:5px; border: solid black;}
+ p{word-wrap: break-word; width:350px;}
+h2 { font-family: 'Akronim', cursive; color:black;}
+
+.popupWindow input{ margin-left: 2px; padding: 4px;  }
+
+.background {background-color: black; opacity: 0.7; left: 0; top: 0; width: 100%; height: 100%; position: fixed;}
