@@ -1,0 +1,25 @@
+body{
+background: darkmagenta;
+}
+ 
+#container{
+        background:url("iMac2.jpg");
+    width:1024px;
+    height:640px;
+    background-position:center;
+    margin:auto;
+}
+
+.img {
+width: 47px;
+margin-top: 446px;
+margin-left: 410px;
+}
+
+.img:hover
+{
+-webkit-transform: scale(1.3);
+-moz-transform: scale(1.3);
+-o-transform: scale(1.3);
+transform: scale(1.3);
+}
