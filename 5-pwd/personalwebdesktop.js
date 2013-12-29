@@ -44,7 +44,7 @@ var personalWebDesktop = {
            counter = +1;
            
            // Enbart ett fönster ska kunna vara öppet samtidigt.
-           if(container > 1){
+           if(counter > 1){
                return false;
            }
            
@@ -125,7 +125,7 @@ var personalWebDesktop = {
             //Onclick fuktionen.
             closeLink.onclick = function() {
                 
-                //Stänga fönstret
+                //Då användaren klickar på stängknappen ska fönstret stängas.
                 container.removeChild(contDiv);
             };
        };
