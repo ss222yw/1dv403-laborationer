@@ -25,6 +25,9 @@ var personalWebDesktop = {
         //Läser bilden från filen.
         image.setAttribute("src","icon.png");
         
+        //Skapar title till ikonen.
+        image.title = "Tryck på ikonen för att öppna den!";
+        
 
         //Skapar klass.
         image.className = "img";
@@ -46,7 +49,6 @@ var personalWebDesktop = {
            counter++;
            // Enbart ett fönster ska kunna vara öppet samtidigt.
            if(counter > 1){
-               
                return false;
            }
            
@@ -75,6 +77,10 @@ var personalWebDesktop = {
             // Läsar bilden från filen.
             closeImage.setAttribute("src","kryss3.png");
             
+            // Skapar title till stäng bilden.
+            closeImage.title ="Stäng!";
+            
+            // Skapar klass till stäng bilden.
             closeImage.className = "kryssImg";
             
             // Skapar a taggen som länk.
@@ -127,12 +133,25 @@ var personalWebDesktop = {
             // Lägg c div taggen inuti cont div taggen.
             contDiv.appendChild(cDiv);
             
+            // Skapar text till ajax bilden.
             var textLoad = document.createTextNode("Laddar");
+            
+            // Lägg textLoad inuti cont div taggen.
             contDiv.appendChild(textLoad);
             
+            // Skapar img till ajax.
             var imageLoad = document.createElement("img");
+            
+            //Läser bilden från filen.
             imageLoad.setAttribute("src","ajax-loader.gif");
+            
+            //Skapar title till ajax bilden.
+            imageLoad.title ="Laddar!";
+            
+            //Skapar klass till ajax bilden.
             imageLoad.className = "imgload";
+            
+            // Lägg imageLoad inuti b div taggen.
             bDiv.appendChild(imageLoad);
             
             
