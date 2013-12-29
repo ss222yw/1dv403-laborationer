@@ -41,7 +41,7 @@ var personalWebDesktop = {
         
         // Onclick fuktion .
        a.onclick = function(){
-           counter = +1;
+           counter++;
            
            // Enbart ett fönster ska kunna vara öppet samtidigt.
            if(counter > 1){
@@ -127,6 +127,7 @@ var personalWebDesktop = {
                 
                 //Då användaren klickar på stängknappen ska fönstret stängas.
                 container.removeChild(contDiv);
+                
             };
        };
         
