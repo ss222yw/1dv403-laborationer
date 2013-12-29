@@ -16,15 +16,16 @@ var personalWebDesktop = {
         // Skapar klass namn som i detta fallet kallas jag den image.
         iconDiv.className = "iconImage";
         
+        
         // lägger div taggen till iconen.
         icon.appendChild(iconDiv);
         
         // Skapar img.
         var image = document.createElement("img");
-        
         //Läser bilden från filen.
         image.setAttribute("src","icon.png");
         
+
         //Skapar klass.
         image.className = "img";
         
@@ -41,10 +42,11 @@ var personalWebDesktop = {
         
         // Onclick fuktion .
        a.onclick = function(){
-           counter++;
            
+           counter++;
            // Enbart ett fönster ska kunna vara öppet samtidigt.
            if(counter > 1){
+               
                return false;
            }
            
@@ -73,6 +75,8 @@ var personalWebDesktop = {
             // Läsar bilden från filen.
             closeImage.setAttribute("src","kryss3.png");
             
+            closeImage.className = "kryssImg";
+            
             // Skapar a taggen som länk.
             var closeLink = document.createElement("a");
             closeLink.setAttribute("href","#");
@@ -100,9 +104,10 @@ var personalWebDesktop = {
         
             // Skapar en text .
             var text = document.createTextNode("Image Viewer");
-            
             // Lägg texten inuti h div taggen.
             hDiv.appendChild(text);
+            
+            
             
             // Skapar div taggen.
             var bDiv = document.createElement("div");
@@ -122,13 +127,28 @@ var personalWebDesktop = {
             // Lägg c div taggen inuti cont div taggen.
             contDiv.appendChild(cDiv);
             
+            var textLoad = document.createTextNode("Laddar");
+            contDiv.appendChild(textLoad);
+            
+            var imageLoad = document.createElement("img");
+            imageLoad.setAttribute("src","ajax-loader.gif");
+            imageLoad.className = "imgload";
+            bDiv.appendChild(imageLoad);
+            
+            
+            
+       
+            
             //Onclick fuktionen.
             closeLink.onclick = function() {
                 
                 //Då användaren klickar på stängknappen ska fönstret stängas.
                 container.removeChild(contDiv);
-                
+                //Lägger counter med 0 igen för att kunna öppna ny fönster igen efter att man stängt den.
+                counter = 0;
             };
+            
+            
        };
         
         
