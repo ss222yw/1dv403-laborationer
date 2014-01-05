@@ -8,6 +8,9 @@ background: darkmagenta;
     height:640px;
     background-position:center;
     margin:auto;
+    -webkit-box-shadow: -9px -5px 15px rgba(0, 48, 54, 1);
+-moz-box-shadow:-9px -5px 15px rgba(0, 48, 54, 1);
+box-shadow:-9px -5px 15px rgba(0, 48, 54, 1);
 }
 
 .img {
@@ -30,7 +33,7 @@ background-color: rgba(220, 220, 220, 0.88);
 width: 400px;
 height: 360px;
 display: block;
-margin-top: -54px;
+margin-top: -360px;
 margin-left: -40px;
 overflow: scroll;
 overflow-x: hidden;
