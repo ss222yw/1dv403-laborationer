@@ -47,7 +47,7 @@ var personalWebDesktop = {
        a.onclick = function(){
            
            counter++;
-           // Enbart ett fönster ska kunna vara öppet samtidigt.Hindrar att fler skapas.
+           // Enbart ett fönster ska kunna vara öppet samtidigt.Hindrar att fler skapas
            if(counter > 1){
                
                return false;
@@ -182,13 +182,14 @@ var personalWebDesktop = {
           var width = 0;
           var height = 0;
           var i = null;
+          var node = document.getElementsByTagName("div");
 
 
           for(i=0; i < jasonImages.length; i++){
               
               var ajaxImageDiv = document.createElement("div");
               
-              ajaxImageDiv.className ="ajax";
+              ajaxImageDiv.className ="ajaxImg";
               
               contDiv.appendChild(ajaxImageDiv);
               // Hitta största bredd.
@@ -196,6 +197,7 @@ var personalWebDesktop = {
                   
                   width = jasonImages[i].thumbWidth;
               }
+              
               // Hitta största högt.
               if(jasonImages[i].thumbHeight > height){
                   
@@ -214,10 +216,16 @@ var personalWebDesktop = {
               
               ajaxImageDiv.appendChild(ajaxImagesLinks);
               
-
+              personalWebDesktop.setBackground(jasonImages[i].URL, ajaxImagesLinks);
+              
           }
- 
-          //Tar bort laddning när anropet är färdigt.
+              for (var x = 0; x < node.length; x++) {
+                    if (node[x].className === "ajaxImg") {
+                        node[x].style.height = height + "px";
+                        node[x].style.width = width + "px";
+                    }
+                }
+          
           bDiv.removeChild(imageLoad);
         });
      return false;
@@ -227,7 +235,14 @@ var personalWebDesktop = {
         
     },
     
- 
+    
+     //Function onclick för att ändra backgrund bilden för container till aktuell bild.
+    setBackground: function(backgroundImg, change){
+        change.onclick = function(){
+            document.getElementById("container").style.backgroundImage = "url(" + backgroundImg + ")";
+        };
+    }
+             
 };
    function AjaxCon(url, callback) {
         
@@ -262,7 +277,7 @@ var personalWebDesktop = {
 
     };
 
-   xhr.open("get", url, true);
+   xhr.open("get", " http://homepage.lnu.se/staff/tstjo/labbyServer/imgviewer/ ", true);
    
 
     xhr.send(null);
@@ -271,7 +286,7 @@ var personalWebDesktop = {
    AjaxCon.prototype.getXHR = function () {
     var xhr = null;
         try {
-        xhr = new XMLHttpRequest();        
+        xhr = new XMLHttpRequest();       
     } catch (error){
         
         }
