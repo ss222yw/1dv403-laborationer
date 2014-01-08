@@ -191,7 +191,7 @@ var personalWebDesktop = {
               
               ajaxImageDiv.className ="ajaxImg";
               
-              contDiv.appendChild(ajaxImageDiv);
+              cDiv.appendChild(ajaxImageDiv);
               // Hitta största bredd.
               if(jasonImages[i].thumbWidth > width){
                   
