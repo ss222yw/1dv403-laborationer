@@ -13,12 +13,14 @@ var personalWebDesktop = {
         // Skapar div tagg
         var iconDiv = document.createElement("div");
         
-        // Skapar klass namn som i detta fallet kallas jag den image.
+        // Skapar klass namn som i detta fallet kallas jag den iconImage.
         iconDiv.className = "iconImage";
         
         
         // lägger div taggen till iconen.
         icon.appendChild(iconDiv);
+        
+
         
         // Skapar img.
         var image = document.createElement("img");
@@ -30,7 +32,7 @@ var personalWebDesktop = {
         
 
         //Skapar klass.
-        image.className = "img";
+        image.className = "clickImg";
         
         // Skapar a taggen.
         var a = document.createElement("a");
@@ -40,7 +42,7 @@ var personalWebDesktop = {
         a.appendChild(image);
         
         //Lägg a taggen inuti icon div taggen.
-        iconDiv.appendChild(a);
+        icon.appendChild(a);
         
         
         // Onclick fuktion .
